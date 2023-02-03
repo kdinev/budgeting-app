@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { StatisticsComponent } from './statistics.component';
 
@@ -8,7 +10,8 @@ describe('StatisticsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatisticsComponent ]
+      declarations: [ StatisticsComponent ],
+      imports: [ NoopAnimationsModule, FormsModule ]
     })
     .compileComponents();
   });

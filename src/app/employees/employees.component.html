@@ -1,13 +1,16 @@
 <div class="column-layout group">
-  <div class="row-reverse-layout group_1">
-    <button igxButton="raised" igxRipple class="button">
-      New Hire
-    </button>
-    <button igxButton="outlined" igxRipple class="button_1">
-      Max SS Income
-    </button>
-  </div>
   <div class="row-layout group_1">
+    <igx-combo type="border" [data]="northwindCategories" valueKey="categoryID" displayKey="categoryID" [filterable]="true" [autoFocusSearch]="true" class="combo"></igx-combo>
+    <div class="row-layout group_2">
+      <button igxButton="outlined" igxRipple class="button">
+        Max SS Income
+      </button>
+      <button igxButton="raised" igxRipple class="button_1">
+        New Hire
+      </button>
+    </div>
+  </div>
+  <div class="row-layout group_2">
     <igx-tree-grid [data]="northwindEmployees" primaryKey="employeeID" foreignKey="managerID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="tree-grid">
       <igx-grid-toolbar>
         <igx-grid-toolbar-actions>
