@@ -5,3 +5,8 @@
   align-items: stretch;
   align-content: flex-start;
 }
+.combo {
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}

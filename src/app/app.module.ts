@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { IgxButtonModule, IgxRippleModule, IgxTreeGridModule, IgxNavbarModule, IgxIconModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
+import { IgxComboModule, IgxButtonModule, IgxRippleModule, IgxTreeGridModule, IgxNavbarModule, IgxIconModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { StatisticsComponent } from './statistics/statistics.component';
 
@@ -19,6 +19,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
     HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    IgxComboModule,
     IgxButtonModule,
     IgxRippleModule,
     IgxTreeGridModule,
