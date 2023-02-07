@@ -35,12 +35,7 @@
             ],
             "scripts": [
               "./node_modules/hammerjs/hammer.min.js"
-            ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "node_modules"
-              ]
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -110,12 +105,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "node_modules"
-              ]
-            }
+            ]
           }
         },
         "lint": {
@@ -132,16 +122,6 @@
   },
   "defaultProject": "budgeting-app",
   "cli": {
-    "schematicCollections": [
-      "@angular-eslint/schematics"
-    ]
-  },
-  "schematics": {
-    "@angular-eslint/schematics:application": {
-      "setParserOptionsProject": true
-    },
-    "@angular-eslint/schematics:library": {
-      "setParserOptionsProject": true
-    }
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

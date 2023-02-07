@@ -1,6 +1,6 @@
 <div class="column-layout group">
   <div class="row-layout group_1">
-    <igx-combo type="border" [data]="northwindCategories" valueKey="categoryID" displayKey="name" [filterable]="true" [autoFocusSearch]="true" class="combo"></igx-combo>
+    <igx-combo type="border" [data]="northwindCategories" valueKey="categoryID" displayKey="name" [filterable]="true" [autoFocusSearch]="true" width="280px" class="combo"></igx-combo>
     <div class="row-layout group_2">
       <button igxButton="outlined" igxRipple class="button">
         Max SS Income
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="row-layout group_2">
-    <igx-tree-grid [data]="northwindEmployees" primaryKey="employeeID" foreignKey="managerID" displayDensity="cosy" [height]="'1100px'" [allowFiltering]="true" filterMode="excelStyleFilter" class="tree-grid">
+    <igx-tree-grid [data]="northwindEmployees" primaryKey="employeeID" foreignKey="managerID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="tree-grid">
       <igx-grid-toolbar>
         <igx-grid-toolbar-actions>
           <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
@@ -33,7 +33,7 @@
       <igx-column field="address.phone" dataType="string" header="address phone" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
       <igx-column field="managerID" dataType="number" header="managerID" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
       <igx-column field="notes" dataType="string" header="notes" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
-      <igx-column field="avatarUrl" dataType="image" header="avatarUrl" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
     </igx-tree-grid>
   </div>
 </div>

@@ -7,6 +7,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { IgxComboModule, IgxButtonModule, IgxRippleModule, IgxTreeGridModule, IgxNavbarModule, IgxIconModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { IgxCategoryChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
     IgxRippleModule,
     IgxTreeGridModule,
     FormsModule,
+    IgxCategoryChartModule,
     IgxNavbarModule,
     IgxIconModule,
     IgxNavigationDrawerModule
