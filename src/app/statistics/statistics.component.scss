@@ -5,8 +5,10 @@
   align-items: stretch;
   align-content: flex-start;
 }
-.combo {
-  height: max-content;
-  min-width: min-content;
-  flex-shrink: 0;
+.category-chart {
+  margin: 12px;
+  min-width: 400px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
 }
