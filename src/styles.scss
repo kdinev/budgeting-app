@@ -1,22 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
 // Standard CSS normalize, comment out if not required or using a different module
-@use "~minireset.css/minireset";
+@use "minireset.css/minireset";
 @use "@infragistics/igniteui-angular/theming" as *;
 
 @include core();
 @include typography($font-family: "Poppins");
 
+$primary: #1028c7;
+
 $custom-palette: palette(
-  $primary: #1028c7,
+  $primary: $primary,
   $secondary: #e0d94c,
   $surface: #000000,
-  $grays: #FFFFFF);
+  $gray: #FFFFFF);
 @include theme($palette: $custom-palette, $schema: $dark-material-schema);
 
+/* Grid Toolbar */
+$toolbar-theme: grid-toolbar-theme(
+  $background-color: $primary,
+  $elevations: 0px 15px 30px 0px rgba(0,0,0,0.4)
+);
+@include css-vars($toolbar-theme);
+/* END Grid Toolbar */
+
 body {
-  background: hsla(var(--igx-surface-500));
-  color: var(--igx-surface-500-contrast);
+  background: hsla(var(--ig-surface-500));
+  color: var(--ig-surface-500-contrast);
 }
 
 html, body {
