@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NorthwindService } from '../services/northwind.service';
+import { FinancialService } from '../services/financial.service';
 
 @Component({
   selector: 'app-statistics',
@@ -7,14 +7,14 @@ import { NorthwindService } from '../services/northwind.service';
   styleUrls: ['./statistics.component.scss']
 })
 export class StatisticsComponent implements OnInit {
-  public northwindCategories: any = null;
+  public financialBoxOfficeRevenue: any = null;
 
   constructor(
-    private northwindService: NorthwindService,
+    private financialService: FinancialService,
   ) {}
 
   ngOnInit() {
     // depending on implementation, data subscriptions might need to be unsubbed later
-    this.northwindService.getData('Categories').subscribe(data => this.northwindCategories = data);
+    this.financialService.getData('BoxOfficeRevenue').subscribe(data => this.financialBoxOfficeRevenue = data);
   }
 }
