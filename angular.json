@@ -130,7 +130,6 @@
       }
     }
   },
-  "defaultProject": "budgeting-app",
   "cli": {
     "schematicCollections": [
       "@angular-eslint/schematics"

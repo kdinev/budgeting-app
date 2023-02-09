@@ -13,8 +13,31 @@ $custom-palette: palette(
   $primary: $primary,
   $secondary: #e0d94c,
   $surface: #000000,
-  $gray: #FFFFFF);
-@include theme($palette: $custom-palette, $schema: $dark-material-schema);
+  $gray: #FFFFFF,
+  $info: color($dark-material-palette, 'info'),
+  $success: color($dark-material-palette, 'success'),
+  $error: color($dark-material-palette, 'error'),
+  $warn: color($dark-material-palette, 'warn')
+);
+
+$include: (
+  igx-navbar,
+  igx-ripple,
+  igx-icon,
+  igx-overlay,
+  igx-button,
+  igx-input-group,
+  igx-combo,
+  igx-nav-drawer,
+  igx-grid,
+  igx-grid-toolbar
+);
+
+@include theme(
+  $palette: $custom-palette,
+  $schema: $dark-material-schema,
+  $exclude: map-keys(map-remove($components, $include...),)
+);
 
 /* Grid Toolbar */
 $toolbar-theme: grid-toolbar-theme(
