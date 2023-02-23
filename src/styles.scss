@@ -7,17 +7,23 @@
 @include core();
 @include typography($font-family: "Poppins");
 
-$primary: #1028c7;
+$primary-dark: #1028c7;
+$primary-light: #3c55f1;
+$secondary-dark: #e0d94c;
+$secondary-light: #b4a904;
 
-$custom-palette: palette(
-  $primary: $primary,
-  $secondary: #e0d94c,
-  $surface: #000000,
-  $gray: #FFFFFF,
-  $info: color($dark-material-palette, 'info'),
-  $success: color($dark-material-palette, 'success'),
-  $error: color($dark-material-palette, 'error'),
-  $warn: color($dark-material-palette, 'warn')
+$custom-palette-dark: palette(
+  $primary: $primary-dark,
+  $secondary: $secondary-dark,
+  $surface: #000,
+  $gray: #ccc
+);
+
+$custom-palette-light: palette(
+  $primary: $primary-light,
+  $secondary: $secondary-light,
+  $surface: #fff,
+  $gray: #222
 );
 
 $include: (
@@ -28,23 +34,41 @@ $include: (
   igx-input-group,
   igx-combo,
   igx-nav-drawer,
+  igx-overlay,
   igx-grid,
   igx-grid-toolbar
 );
 
 @include theme(
-  $palette: $custom-palette,
-  $schema: $dark-material-schema,
+  $palette: $custom-palette-light,
+  $schema: $light-material-schema,
   $exclude: map-keys(map-remove($components, $include...),)
 );
 
-/* Grid Toolbar */
-$toolbar-theme: grid-toolbar-theme(
-  $background-color: $primary,
-  $elevations: 0px 15px 30px 0px rgba(0,0,0,0.4)
-);
-@include css-vars($toolbar-theme);
-/* END Grid Toolbar */
+@media (prefers-color-scheme: light) {
+  /* Grid Toolbar override for light color scheme */
+  igx-grid-toolbar {
+    --background-color: #{$primary-light};
+    --title-text-color: #{text-contrast($primary-light)};
+  }
+  /* END Grid Toolbar */
+}
+
+@media (prefers-color-scheme: dark) {
+  // changes native element schema (scrollbars, select, etc.)
+  :root {
+    color-scheme: dark;
+  }
+
+  @include palette($custom-palette-dark);
+
+  /* Grid Toolbar override for light color scheme */
+  igx-grid-toolbar {
+    --background-color: #{$primary-dark};
+    --title-text-color: #{text-contrast($primary-dark)};
+  }
+  /* END Grid Toolbar */
+}
 
 body {
   background: hsla(var(--ig-surface-500));
@@ -55,8 +79,8 @@ html, body {
   height: 100%;
 }
 
-.igx-typography {
-  h1, h2, h3, h4, h5, h6, p, .igx-typography__body-1 {
+.ig-typography {
+  h1, h2, h3, h4, h5, h6, p, .ig-typography__body-1 {
     margin: 0;
   }
 }
