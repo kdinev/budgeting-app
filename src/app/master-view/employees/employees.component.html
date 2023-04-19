@@ -7,7 +7,7 @@
       <button igxButton="outlined" igxRipple class="button">
         Max SS Income
       </button>
-      <button igxButton="raised" igxRipple class="button_1">
+      <button igxButton="raised" igxRipple [igxToggleAction]="dialog" class="button_1">
         New Hire
       </button>
     </div>
@@ -38,4 +38,26 @@
       <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
     </igx-tree-grid>
   </div>
+  <igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #dialog>
+    <igx-dialog-title>
+      <h5>
+        New Hire
+      </h5>
+    </igx-dialog-title>
+    <ng-container>
+      <igx-input-group type="border" class="input">
+        <input type="text" igxInput />
+        <label igxLabel>First Name</label>
+      </igx-input-group>
+      <igx-input-group type="border" class="input">
+        <input type="text" igxInput />
+        <label igxLabel>Last Name</label>
+      </igx-input-group>
+    </ng-container>
+    <igx-dialog-actions>
+      <button igxButton="flat" igxRipple class="button_2">
+        Submit
+      </button>
+    </igx-dialog-actions>
+  </igx-dialog>
 </div>
