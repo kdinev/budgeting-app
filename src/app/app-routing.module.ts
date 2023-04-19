@@ -4,14 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './error-routing/not-found/not-found.component';
 import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component';
 import { ErrorRoutingModule } from './error-routing/error-routing.module';
-import { EmployeesComponent } from './employees/employees.component';
-import { StatisticsComponent } from './statistics/statistics.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'employees', pathMatch: 'full' },
+  { path: '', redirectTo: 'master-view', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
-  { path: 'employees', component: EmployeesComponent, data: { text: 'Employees' } },
-  { path: 'statistics', component: StatisticsComponent, data: { text: 'Statistics' } },
+  { path: 'master-view', loadChildren: () => import('./master-view/master-view.module').then(m => m.MasterViewModule) },
+  { path: 'login', component: LoginComponent, data: { text: 'Login' } },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
 

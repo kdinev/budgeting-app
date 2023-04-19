@@ -1,6 +1,8 @@
 <div class="column-layout group">
   <div class="row-layout group_1">
-    <igx-combo type="border" [data]="northwindCategories" valueKey="categoryID" displayKey="name" [filterable]="true" [autoFocusSearch]="true" width="280px" class="combo"></igx-combo>
+    <igx-combo type="border" [data]="northwindCategories" valueKey="categoryID" displayKey="name" [filterable]="true" [autoFocusSearch]="true" width="280px" class="combo">
+      <label igxLabel>Label/Placeholder</label>
+    </igx-combo>
     <div class="row-layout group_2">
       <button igxButton="outlined" igxRipple class="button">
         Max SS Income

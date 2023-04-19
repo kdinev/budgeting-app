@@ -3,32 +3,24 @@ import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { IgxComboModule, IgxButtonModule, IgxRippleModule, IgxTreeGridModule, IgxNavbarModule, IgxIconModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
+import { LoginComponent } from './login/login.component';
+import { IgxInputGroupModule, IgxButtonModule, IgxRippleModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
-import { StatisticsComponent } from './statistics/statistics.component';
-import { IgxCategoryChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesComponent,
-    StatisticsComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    IgxComboModule,
+    IgxInputGroupModule,
     IgxButtonModule,
     IgxRippleModule,
-    IgxTreeGridModule,
-    FormsModule,
-    IgxCategoryChartModule,
-    IgxNavbarModule,
-    IgxIconModule,
-    IgxNavigationDrawerModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
