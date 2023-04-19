@@ -1,0 +1,42 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 12px;
+  min-width: 320px;
+  min-height: 400px;
+}
+.h2 {
+  text-align: center;
+  margin: 0 12px;
+  height: max-content;
+  min-width: min-content;
+}
+.hyperlink {
+  text-align: right;
+  color: hsla(var(--ig-info-500));
+  margin: 0 12px;
+  height: max-content;
+  min-width: min-content;
+}
+.input {
+  margin: 12px;
+  height: max-content;
+  min-width: min-content;
+}
+.button {
+  margin: 12px;
+  height: max-content;
+}
