@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MasterViewRoutingModule } from './master-view-routing.module';
 import { MasterViewComponent } from './master-view.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { IgxComboModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxTreeGridModule, IgxNavbarModule, IgxIconModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
+import { IgxComboModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxToggleModule, IgxTreeGridModule, IgxDialogModule, IgxNavbarModule, IgxIconModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { StatisticsComponent } from './statistics/statistics.component';
 
@@ -21,7 +21,9 @@ import { StatisticsComponent } from './statistics/statistics.component';
     IgxInputGroupModule,
     IgxButtonModule,
     IgxRippleModule,
+    IgxToggleModule,
     IgxTreeGridModule,
+    IgxDialogModule,
     FormsModule,
     IgxNavbarModule,
     IgxIconModule,

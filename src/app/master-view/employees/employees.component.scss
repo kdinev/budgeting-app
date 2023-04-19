@@ -53,6 +53,13 @@
   height: max-content;
   flex-shrink: 0;
 }
+.input {
+  height: max-content;
+  min-width: min-content;
+}
+.button_2 {
+  height: max-content;
+}
 .tree-grid {
   min-width: 600px;
   flex-grow: 1;
